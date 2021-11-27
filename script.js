@@ -91,7 +91,7 @@ const addItemForm = document.getElementById("addItemForm");
 // console.log(addItemForm)
 
 addItemForm.onsubmit = (event) => {
-    // event.preventDefault();
+    event.preventDefault();
 
     const newTodoText = event.target.newToDo.value;
     // указывается имя инпута
@@ -106,9 +106,8 @@ addItemForm.onsubmit = (event) => {
 
     if (newTodoText == '') {
         newTodoText = false;
-        } else {
-        }
-    
+    } else {}
+
     event.target.newToDo.value = "";
 
     event.preventDefault();
@@ -155,7 +154,3 @@ clearAllBtn.onclick = () => {
     state.items = [];
     rerenderApp();
 }
-
-
-
-
